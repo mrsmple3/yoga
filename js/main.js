@@ -13,6 +13,11 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
+// videoMain__play
+$(".videoMain__play").click(function() {
+    $(".videoMain").addClass("open")
+});
+
 // header burgir
 $(".header__burgir").click(function() {
     $("body").addClass("hidden");
