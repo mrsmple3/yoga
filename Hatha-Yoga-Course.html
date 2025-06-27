@@ -329,7 +329,9 @@
     <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        new Rellax('.rellax');
+        if (window.innerWidth > 1199) {
+            new Rellax('.rellax');
+        }
     </script>
 </body>
 </html>
