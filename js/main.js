@@ -13,6 +13,25 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
+// Animate on Scroll
+const animatedElements = document.querySelectorAll('.animate-on-scroll');
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        } else {
+            entry.target.classList.remove('is-visible');
+        }
+    });
+});
+animatedElements.forEach(el => observer.observe(el));
+
 // Fixed Header
 $(window).on('scroll', () => $(".header").toggleClass("fixed", $(window).scrollTop() > 50));
 
