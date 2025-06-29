@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Yoga pure space - We believe yoga is for everybody</title>
+    <!-- <style>
+        .weekdays, .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+        }
+
+        .weekdays div {
+        font-weight: bold;
+        color: #333;
+        padding: 5px 0;
+        }
+
+        .days div {
+        padding: 10px 0;
+        margin: 2px;
+        border-radius: 6px;
+        transition: 0.2s;
+        cursor: pointer;
+        }
+
+        .days div:hover {
+        background-color: #d0eaff;
+        }
+
+        .today {
+        background-color: #007bff;
+        color: white;
+        }
+    </style> -->
+</head>
+<body class="scroll-container">
+    <header class="header">
+        <div class="header__wrap">
+            <div class="container">
+                <div class="header__box">
+                    <a href="/" class="header__logo"></a>
+                    <nav class="header__navbar">
+                        <ul>
+                            <li><a class="active" href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><p>Courses</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M4.87366 5.94397C5.055 5.94397 5.19366 5.8853 5.28966 5.76797L9.48166 1.25597C9.58833 1.1493 9.639 1.01597 9.63366 0.855969C9.62833 0.69597 9.56966 0.562636 9.45766 0.455969C9.34566 0.349303 9.20966 0.295969 9.04966 0.295969C8.88966 0.295969 8.75633 0.354636 8.64966 0.47197L4.87366 4.53597L1.09766 0.47197C0.990996 0.354636 0.857662 0.295969 0.697662 0.295969C0.537662 0.295969 0.401662 0.349303 0.289662 0.455969C0.177662 0.562636 0.118996 0.69597 0.113662 0.855969C0.108329 1.01597 0.158996 1.1493 0.265662 1.25597L4.45766 5.76797C4.575 5.8853 4.71366 5.94397 4.87366 5.94397Z" fill="#19213D"/>
+                                </svg>
+                                <ul class="navbar_sub">
+                                    <li>
+                                        <a href="/Hatha-Yoga-Course.html">Hatha Yoga Course</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Iyengar-Yoga-Course.html">Iyengar Yoga Course</a>
+                                    </li>
+                                    <li>
+                                        <a href="Vinyasa-Yoga-Course.html">Vinyasa Yoga Course</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Challenge</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__btn">
+                        <a class="main_btn1" href="#"><span>Go to dashboard</span></a>
+                        <a class="main_btn2" href="#">
+                            <span>Get in touch
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                                    <path d="M4.97873 0.183984C5.0814 0.0813169 5.2004 0.0299835 5.33573 0.0299835C5.47107 0.0299835 5.59007 0.0766497 5.69273 0.169983L10.4807 4.74798C10.5834 4.85065 10.6347 4.97198 10.6347 5.11198C10.6347 5.25198 10.5834 5.37332 10.4807 5.47598L5.69273 10.054C5.59007 10.1473 5.46873 10.1917 5.32873 10.187C5.18874 10.1823 5.07207 10.1287 4.97873 10.026C4.8854 9.92332 4.84107 9.80432 4.84573 9.66898C4.8504 9.53365 4.8994 9.41932 4.99273 9.32598L9.41674 5.11198L4.99273 0.897984C4.8994 0.80465 4.8504 0.687984 4.84573 0.547983C4.84107 0.407984 4.8854 0.28665 4.97873 0.183984ZM0.302734 5.11198C0.302734 4.97198 0.351734 4.85298 0.449734 4.75498C0.547734 4.65698 0.666734 4.60798 0.806734 4.60798H10.1307C10.2707 4.60798 10.3897 4.65698 10.4877 4.75498C10.5857 4.85298 10.6347 4.96965 10.6347 5.10498C10.6347 5.24032 10.5857 5.35698 10.4877 5.45498C10.3897 5.55298 10.2707 5.60198 10.1307 5.60198H0.806734C0.666734 5.60198 0.547734 5.55298 0.449734 5.45498C0.351734 5.35698 0.302734 5.24265 0.302734 5.11198Z" fill="#0F0B08"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <button class="header__burgir">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header__menu">
+            <div class="header__menu_navbar">
+                <button class="menu_close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <path d="M21.75 14.25L14.25 21.75M14.25 14.25L21.75 21.75" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
+                        <path d="M10.5 5.00673C12.7063 3.73045 15.2679 3 18 3C26.2842 3 33 9.71572 33 18C33 26.2842 26.2842 33 18 33C9.71572 33 3 26.2842 3 18C3 15.2679 3.73045 12.7063 5.00673 10.5" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="#" class="logo"></a>
+                <nav class="navbar">
+                    <ul>
+                        <li><a class="active" href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a class="" href="#">Courses</a></li>
+                        <li><a class="" href="#">Challenge</a></li>
+                        <li><a class="" href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+                <button class="btn">Go to dashboard</button>
+                <div class="link">
+                    <a href="mailto:contact@pureyogaspace.com">contact@pureyogaspace.com</a>
+                    <a href="contact@pureyogaspace.com" target="_blank">www.pureyogaspace.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="dashboard">
+            <div class="container">
+                <h1><span>User</span> dashboard</h1>
+                <div class="dashboard__link">
+                    <ul>
+                        <li><p>ACTIVE COURSES</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path d="M4.87366 5.94397C5.055 5.94397 5.19366 5.8853 5.28966 5.76797L9.48166 1.25597C9.58833 1.1493 9.639 1.01597 9.63366 0.855969C9.62833 0.69597 9.56966 0.562636 9.45766 0.455969C9.34566 0.349303 9.20966 0.295969 9.04966 0.295969C8.88966 0.295969 8.75633 0.354636 8.64966 0.47197L4.87366 4.53597L1.09766 0.47197C0.990996 0.354636 0.857662 0.295969 0.697662 0.295969C0.537662 0.295969 0.401662 0.349303 0.289662 0.455969C0.177662 0.562636 0.118996 0.69597 0.113662 0.855969C0.108329 1.01597 0.158996 1.1493 0.265662 1.25597L4.45766 5.76797C4.575 5.8853 4.71366 5.94397 4.87366 5.94397Z" fill="#19213D"/>
+                            </svg>
+                            <ul class="navbar_sub">
+                                <li>
+                                    <a href="/Hatha-Yoga-Course.html">Hatha Yoga Course</a>
+                                </li>
+                                <li>
+                                    <a href="/Iyengar-Yoga-Course.html">Iyengar Yoga Course</a>
+                                </li>
+                                <li>
+                                    <a href="Vinyasa-Yoga-Course.html">Vinyasa Yoga Course</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="active" href="#">Challenge</a></li>
+                        <li><a href="#">Billing</a></li>
+                    </ul>
+                </div>
+                <div class="formBox">
+                    <div class="formBox__left">
+                        <video src="img/video.mp4" controls width="100%" height="650px"></video>
+                    </div>
+                    <div class="formBox__right">
+                        <!-- <div class="calendar">
+                            <div class="header">
+                            <button id="prev">‹</button>
+                            <div id="month-year"></div>
+                            <button id="next">›</button>
+                            </div>
+                            <div class="weekdays">
+                            <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+                            </div>
+                            <div class="days" id="days"></div>
+                        </div> -->
+                        <div class="calendar_box">
+                            <div id="calendar1"></div>
+                        </div>
+                        <div class="wrap">
+                            <div class="icon">
+                                <img src="img/banner-icon.svg" alt="">
+                            </div>
+                            <h4><span>Hatha yoga</span> course</h4>
+                            <p>Hatha Yoga is a gentle yet powerful practice that focuses on aligning the body, breath, and mind. With a slower pace and longer-held poses, it's perfect for beginners or anyone seeking a mindful, grounding experience.</p>
+                            <h6>Cancel payment </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__track">
+                <!-- Продублировать на 3 обязательно! -->
+                <!-- 1 -->
+                <div class="footer__icon">
+                    <img src="img/footer-icon1.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon2.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon3.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon4.svg" alt="">
+                </div>
+                <!-- 2 -->
+                <div class="footer__icon">
+                    <img src="img/footer-icon1.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon2.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon3.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon4.svg" alt="">
+                </div>
+                <!-- 3 -->
+                <div class="footer__icon">
+                    <img src="img/footer-icon1.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon2.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon3.svg" alt="">
+                </div>
+                <div class="footer__icon">
+                    <img src="img/footer-icon4.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer__center">
+            <div class="container">
+                <div class="footer__box">
+                    <div class="footer__link">
+                        <a href="mailto:contact@pureyogaspace.com">contact@pureyogaspace.com</a>
+                    </div>
+                    <p class="start_yoga">START YOUR <b>YOGA JOURNEY</b></p>
+                    <div class="footer__link">
+                        <a href="www.pureyogaspace.com" target="_blank">www.pureyogaspace.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__box">
+                    <div class="footer__left">
+                        <a href="/" class="footer__logo"></a>
+                        <p class="footer__copy">2025 Copyright © PureYogaSpace</p>
+                        <div class="footer__soc">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                                    <path d="M6.242 17.0801V9.68208H8.834L9.23 6.80208H6.242V4.96608C6.242 4.49808 6.332 4.16208 6.512 3.95808C6.74 3.69408 7.148 3.56208 7.736 3.56208H9.338V0.988079C9.158 0.964079 8.876 0.940079 8.492 0.916079C7.988 0.892078 7.49 0.880079 6.998 0.880079C6.23 0.880079 5.552 1.02708 4.964 1.32108C4.376 1.61508 3.92 2.04708 3.596 2.61708C3.272 3.18708 3.11 3.87408 3.11 4.67808V6.80208H0.5V9.68208H3.11V17.0801H6.242Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                                    <path d="M11.88 9.97998C11.88 10.532 11.718 11.066 11.394 11.582C11.094 12.05 10.662 12.404 10.098 12.644C9.57 12.86 9.015 12.914 8.433 12.806C7.851 12.698 7.356 12.44 6.948 12.032C6.54 11.624 6.279 11.123 6.165 10.529C6.051 9.93498 6.108 9.38598 6.336 8.88198C6.564 8.34198 6.921 7.90998 7.407 7.58598C7.893 7.26198 8.424 7.09998 9 7.09998C9.384 7.09998 9.753 7.17498 10.107 7.32498C10.461 7.47498 10.77 7.68198 11.034 7.94598C11.298 8.20998 11.505 8.51898 11.655 8.87298C11.805 9.22698 11.88 9.59598 11.88 9.97998ZM18 6.01998V13.94C18 14.6 17.871 15.239 17.613 15.857C17.355 16.475 16.989 17.021 16.515 17.495C16.041 17.969 15.495 18.335 14.877 18.593C14.259 18.851 13.62 18.98 12.96 18.98H5.04C4.38 18.98 3.741 18.851 3.123 18.593C2.505 18.335 1.959 17.969 1.485 17.495C1.011 17.021 0.645 16.475 0.387 15.857C0.129 15.239 0 14.6 0 13.94V6.01998C0 5.35998 0.129 4.72098 0.387 4.10298C0.645 3.48498 1.011 2.93898 1.485 2.46498C1.959 1.99098 2.505 1.62498 3.123 1.36698C3.741 1.10898 4.38 0.97998 5.04 0.97998H12.96C13.62 0.97998 14.259 1.10898 14.877 1.36698C15.495 1.62498 16.041 1.99098 16.515 2.46498C16.989 2.93898 17.355 3.48498 17.613 4.10298C17.871 4.72098 18 5.35998 18 6.01998ZM13.302 9.97998C13.302 9.11598 13.062 8.31198 12.582 7.56798C12.354 7.21998 12.072 6.91098 11.736 6.64098C11.4 6.37098 11.04 6.15198 10.656 5.98398C9.84 5.64798 9.006 5.56398 8.154 5.73198C7.278 5.92398 6.546 6.31998 5.958 6.91998C5.334 7.54398 4.938 8.28198 4.77 9.13398C4.686 9.54198 4.665 9.96198 4.707 10.394C4.749 10.826 4.851 11.237 5.013 11.627C5.175 12.017 5.391 12.377 5.661 12.707C5.931 13.037 6.246 13.322 6.606 13.562C7.35 14.042 8.154 14.282 9.018 14.282C9.582 14.282 10.128 14.171 10.656 13.949C11.184 13.727 11.652 13.412 12.06 13.004C12.468 12.596 12.78 12.131 12.996 11.609C13.212 11.087 13.326 10.538 13.338 9.96198L13.302 9.97998ZM14.742 5.29998C14.742 5.07198 14.682 4.87398 14.562 4.70598C14.43 4.51398 14.268 4.37898 14.076 4.30098C13.884 4.22298 13.68 4.20198 13.464 4.23798C13.248 4.27398 13.059 4.37298 12.897 4.53498C12.735 4.69698 12.636 4.88298 12.6 5.09298C12.564 5.30298 12.582 5.50998 12.654 5.71398C12.714 5.88198 12.846 6.04398 13.05 6.19998C13.242 6.33198 13.44 6.39798 13.644 6.39798C13.92 6.39798 14.178 6.28998 14.418 6.07398C14.622 5.86998 14.724 5.61798 14.724 5.31798L14.742 5.29998Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M0.900391 2.68015C0.900391 2.15215 1.08339 1.72015 1.44939 1.38415C1.81539 1.04815 2.28939 0.880153 2.87139 0.880153C3.45339 0.880153 3.92139 1.04815 4.27539 1.38415C4.62939 1.72015 4.80639 2.16415 4.80639 2.71615C4.80639 3.22015 4.63239 3.63415 4.28439 3.95815C3.90039 4.30615 3.42039 4.48015 2.84439 4.48015H2.82639C2.25039 4.48015 1.78539 4.30615 1.43139 3.95815C1.07739 3.61015 0.900391 3.18415 0.900391 2.68015ZM1.09839 16.3062V5.90215H4.57239V16.3062H1.09839ZM6.49839 16.3062H9.97239V10.4922C9.97239 10.1082 10.0144 9.82615 10.0984 9.64615C10.2544 9.27415 10.4764 8.98015 10.7644 8.76415C11.0524 8.51215 11.4244 8.38615 11.8804 8.38615C13.0444 8.38615 13.6264 9.17215 13.6264 10.7442V16.3062H17.1004V10.3302C17.1004 8.78215 16.7374 7.61515 16.0114 6.82915C15.2854 6.04315 14.3224 5.65015 13.1224 5.65015C11.7784 5.65015 10.7284 6.22615 9.97239 7.37815V7.41415H9.95439L9.97239 7.37815V5.90215H6.49839C6.52239 6.33415 6.53439 7.36615 6.53439 8.99815C6.53439 9.88615 6.52839 11.6322 6.51639 14.2362L6.49839 16.3062Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">
+                                    <path d="M8.79205 12.7582L5.46205 12.6862H4.92205C4.32205 12.6742 3.87205 12.6622 3.57205 12.6502C3.08005 12.6142 2.63605 12.5542 2.24005 12.4702C1.74805 12.3622 1.36405 12.1222 1.08805 11.7502C0.860052 11.4382 0.692052 11.0182 0.584052 10.4902C0.512052 10.1662 0.452052 9.6802 0.404052 9.0322L0.386052 8.9242C0.218052 6.8722 0.290052 4.8202 0.602052 2.7682C0.698052 2.2042 0.911052 1.7572 1.24105 1.4272C1.57105 1.0972 2.00005 0.914196 2.52805 0.878196C4.19605 0.758196 6.00205 0.692196 7.94605 0.680196C9.51805 0.668196 11.3181 0.698195 13.3461 0.770196C13.6821 0.782196 14.0601 0.830195 14.4801 0.914196C15.0201 1.0222 15.4461 1.2802 15.7581 1.6882C15.9981 2.0122 16.1781 2.4682 16.2981 3.0562C16.3701 3.3922 16.4301 3.9262 16.4781 4.6582L16.4961 4.8922C16.6041 6.5602 16.5501 8.2282 16.3341 9.8962C16.2261 10.7002 16.0521 11.2942 15.8121 11.6782C15.4881 12.1942 14.9901 12.4822 14.3181 12.5422C12.0981 12.7102 10.2621 12.7822 8.81005 12.7582H8.79205ZM6.83005 9.2662C8.31805 8.3422 9.69805 7.4902 10.9701 6.7102L6.83005 4.1362V9.2662Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="footer__navbar">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Challenge</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Log in</a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">Legal terms</a></li>
+                            <li><a href="#">Cookies policy</a></li>
+                            <li><a href="#">Terms</a></li>
+                        </ul>
+                        <ul class="mobile_none">
+                            <li><a href="#">User Dashboard</a></li>
+                            <li><a href="#">My courses</a></li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="footer__btn">Go to dashboard</a>
+                </div>
+                <div class="footer__pay">
+                    <p>Secure payment guaranteed</p>
+                    <img src="img/pay1.svg" alt="">
+                    <img src="img/pay2.svg" alt="">
+                    <img src="img/pay3.svg" alt="">
+                    <img src="img/pay4.svg" alt="">
+                    <img src="img/pay5.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <!-- <script src="js/date.js"></script> -->
+    <script src="js/main.js"></script>
+    <script>
+        $(function() {
+        const datepickerOptions = {
+            dateFormat: "dd.mm.yy",
+            firstDay: 1,
+            dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+            monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+        };
+
+        $("#calendar1").datepicker(datepickerOptions);
+        });
+  </script>
+</body>
+</html>
