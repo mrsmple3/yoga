@@ -5335,6 +5335,37 @@ h6 {
     height: 100%;
   }
 }
+@media screen and (min-width: 1199px) {
+  .transition-delay2 {
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+  }
+
+  .transition-delay3 {
+    -webkit-transition-delay: 0.8s;
+            transition-delay: 0.8s;
+  }
+
+  .transition-delay4 {
+    -webkit-transition-delay: 1.1s;
+            transition-delay: 1.1s;
+  }
+
+  .transition-delay5 {
+    -webkit-transition-delay: 1.4s;
+            transition-delay: 1.4s;
+  }
+
+  .transition-delay6 {
+    -webkit-transition-delay: 1.7s;
+            transition-delay: 1.7s;
+  }
+
+  .transition-delay7 {
+    -webkit-transition-delay: 2s;
+            transition-delay: 2s;
+  }
+}
 .animate-on-scroll {
   opacity: 0;
   -webkit-transform: translateY(50px);
@@ -5356,34 +5387,4 @@ h6 {
   /* Возвращается на место */
   -webkit-filter: blur(0);
           filter: blur(0);
-}
-
-.transition-delay2 {
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-}
-
-.transition-delay3 {
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
-}
-
-.transition-delay4 {
-  -webkit-transition-delay: 1.1s;
-          transition-delay: 1.1s;
-}
-
-.transition-delay5 {
-  -webkit-transition-delay: 1.4s;
-          transition-delay: 1.4s;
-}
-
-.transition-delay6 {
-  -webkit-transition-delay: 1.7s;
-          transition-delay: 1.7s;
-}
-
-.transition-delay7 {
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
 }
