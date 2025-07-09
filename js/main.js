@@ -64,7 +64,15 @@ $(".menu_close").click(() => {
 if ($(".rellax").length && window.innerWidth > 1199) new Rellax('.rellax');
 
 // Question Toggle
-if ($(".question").length) $(".question__btn").click(function() { $(this).toggleClass("open"); });
+if ($(".question").length) {
+    $(".question__btn").each(function() {
+        if ($(this).hasClass("open")) $(this).next().slideDown(0);
+    }).click(function() {
+        const btn = $(this);
+        btn.toggleClass("open");
+        btn.next().slideToggle(300);
+    });
+};
 
 // Video Play
 if ($(".videoMain__play").length) $(".videoMain__play").click(() => $(".videoMain").addClass("open"));
