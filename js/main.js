@@ -76,3 +76,13 @@ if ($(".question").length) {
 
 // Video Play
 if ($(".videoMain__play").length) $(".videoMain__play").click(() => $(".videoMain").addClass("open"));
+
+$('.expect__title a').on('click', function (e) {
+    e.preventDefault();
+    const target = $(this).attr('href');
+    if (target && $(target).length) {
+        const offset = window.innerWidth < 1023 ? 80 : 100;
+        const scrollTarget = $(target).offset().top - offset;
+        $('html, body').animate({ scrollTop: scrollTarget }, 1000);
+    }
+});

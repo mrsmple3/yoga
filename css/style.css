@@ -1581,23 +1581,11 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
-.question__btn.open {
-  color: #98B299;
-}
-.question__btn.open h3 {
-  color: #98B299;
-}
 .question__btn.open .question__down {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-}
-
-.question__btn.open + .question__block {
-  display: block;
 }
 
 .contact .container {
@@ -2781,6 +2769,10 @@ h6 {
   height: 110%;
 }
 
+.banner__img > div {
+  height: 100%;
+}
+
 .banner__wrap {
   min-height: 590px;
   position: relative;
@@ -3203,8 +3195,8 @@ h6 {
 
 .footer__logo {
   display: block;
-  width: 172px;
-  height: 38px;
+  width: 180px;
+  height: 46px;
   background: url(../img/footer-logo.svg) no-repeat center;
   background-size: 100%;
   margin-bottom: 16px;
@@ -5320,6 +5312,12 @@ h6 {
   .question__block {
     padding-top: 24px;
   }
+
+  .dashboard__table {
+    border: 0;
+    padding: 0;
+    padding-top: 50px;
+  }
 }
 @media screen and (max-width: 390px) {
   .aboutMain__img img {
@@ -5335,7 +5333,6 @@ h6 {
     height: 100%;
   }
 }
-
 .animate-on-scroll {
   opacity: 0;
   -webkit-transform: translateY(50px);
@@ -5358,6 +5355,7 @@ h6 {
   -webkit-filter: blur(0);
           filter: blur(0);
 }
+
 @media screen and (min-width: 1199px) {
   .transition-delay2 {
     -webkit-transition-delay: 0.5s;
